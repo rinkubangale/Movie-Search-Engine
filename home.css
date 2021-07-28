@@ -118,3 +118,13 @@ img{
     width: 70%;
     border: 10px solid black;
 }
+
+#movies span{
+    width: 100px;
+    margin: auto;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+}

@@ -42,8 +42,15 @@ async function getData() {
 
             let p_title = document.createElement("div");
             p_title.innerHTML = el.Title;
-    
-            let p_rating = document.createElement("div");
+
+            if (el.imdbRating > 8.5) {
+                var p_rec = document.createElement("div");
+                p_rec.innerHTML = `<span>Recommended</span>`;
+            } else {
+                var p_rec = document.createElement("div");
+                p_rec.innerHTML = ``
+            }
+            var p_rating = document.createElement("div");
             p_rating.innerHTML = "IMDB: " + el.imdbRating + "⭐";
 
             let img = document.createElement("img");
@@ -60,7 +67,7 @@ async function getData() {
             disc.style.color = "grey";
 
 
-            div.append(img, p_title, disc, p_date, p_rating);
+            div.append(img, p_rec, p_title, disc, p_date, p_rating);
 
             movies_div.append(div);
         }
